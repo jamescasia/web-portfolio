@@ -27,7 +27,7 @@ class _PageThreeState extends State<PageThree> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 FaIcon(
-                  FontAwesomeIcons.crown,
+                  FontAwesomeIcons.trophy,
                   size: Globals.dheight * 60,
                   color: Globals.white,
                 ),
@@ -262,7 +262,7 @@ class _PageThreeState extends State<PageThree> {
                           Stack(
                             children: <Widget>[
                               Image.asset(
-                                "assets/photos/android_masters.jpg",
+                                "assets/photos/android_masters_2.jpg",
                                 fit: BoxFit.cover,
                                 width: double.infinity,
                                 height: double.infinity,

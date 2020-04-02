@@ -57,7 +57,7 @@ class _PageOneState extends State<PageOne> {
             ),
             SizedBox(height: Globals.dheight * 30),
             Text(
-              "I design, code, learn, and explore.",
+              "I design, code, learn, solve problems, and explore.",
               style: TextStyle(
                   fontSize: Globals.dheight * 26,
                   color: Globals.white,

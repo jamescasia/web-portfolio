@@ -28,12 +28,12 @@ class _PageTwoState extends State<PageTwo> {
                     children: <Widget>[
                       FaIcon(
                         FontAwesomeIcons.handPaper,
-                        size: Globals.dheight * 60,
+                        size: Globals.dheight * 80,
                         color: Globals.white,
                       ),
                       SizedBox(height: Globals.dheight * 24),
                       Text(
-                        "I'm James. It's nice meeting you",
+                        "I'm James. It's nice meeting you.",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             fontSize: Globals.dheight * 36,
@@ -49,7 +49,7 @@ class _PageTwoState extends State<PageTwo> {
                             color: Globals.white,
                             fontWeight: FontWeight.w300),
                       ),
-                      SizedBox(height: Globals.dheight * 100),
+                      SizedBox(height: Globals.dheight * 140),
                     ],
                   ),
                 ),
@@ -64,10 +64,10 @@ class _PageTwoState extends State<PageTwo> {
             top: Globals.height * 0.45,
             child: Container(
               width: Globals.width,
-              height: Globals.height * 0.5,
+              height: Globals.height * 0.55,
               child: Center(
                 child: Container(
-                    width: Globals.width * 0.94,
+                    width: Globals.width * 0.8,
                     height: Globals.height,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(30)),
@@ -91,7 +91,7 @@ class _PageTwoState extends State<PageTwo> {
                                 FaIcon(
                                   FontAwesomeIcons.pencilRuler,
                                   color: Globals.violet,
-                                  size: Globals.dheight * 80,
+                                  size: Globals.dheight * 60,
                                 ),
                                 SizedBox(height: Globals.dheight * 40),
                                 Column(
@@ -159,7 +159,7 @@ class _PageTwoState extends State<PageTwo> {
                                 FaIcon(
                                   FontAwesomeIcons.hardHat,
                                   color: Globals.violet,
-                                  size: Globals.dheight * 80,
+                                  size: Globals.dheight * 60,
                                 ),
                                 SizedBox(height: Globals.dheight * 40),
                                 Column(
@@ -227,7 +227,7 @@ class _PageTwoState extends State<PageTwo> {
                                 FaIcon(
                                   FontAwesomeIcons.search,
                                   color: Globals.violet,
-                                  size: Globals.dheight * 80,
+                                  size: Globals.dheight * 60,
                                 ),
                                 SizedBox(height: Globals.dheight * 40),
                                 Column(

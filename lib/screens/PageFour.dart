@@ -18,7 +18,7 @@ class _PageFourState extends State<PageFour> {
     return Container(
       color: Globals.black,
       width: Globals.width,
-      height: Globals.height*1.5,
+      height: Globals.height * 1.5,
       child: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -417,15 +417,19 @@ class _PageFourState extends State<PageFour> {
                           )),
                       SizedBox(width: Globals.dwidth * 60),
                       HoverCard(
-                          Stack(
-                            children: <Widget>[
-                              Image.asset(
-                                "assets/photos/color_flex.png",
-                                fit: BoxFit.cover,
-                                width: double.infinity,
-                                height: double.infinity,
+                          Container(
+                            color: Colors.amber,
+                            width: double.infinity,
+                            height: double.infinity,
+                            child: Center(
+                              child: Text(
+                                "This\nPortfolio.",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: Globals.dheight * 60,
+                                    fontWeight: FontWeight.w600),
                               ),
-                            ],
+                            ),
                           ),
                           Container(
                             width: double.infinity,
@@ -439,7 +443,7 @@ class _PageFourState extends State<PageFour> {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Text(
-                                      "Color Flex!",
+                                      "This Portfolio.",
                                       style: TextStyle(
                                           color: Colors.white,
                                           fontSize: Globals.dheight * 22,
@@ -447,7 +451,7 @@ class _PageFourState extends State<PageFour> {
                                     ),
                                     SizedBox(height: Globals.dheight * 10),
                                     Text(
-                                      "Color Flex! is an award-winning casual game that qualified for Android Masters 2018. Visit it on the Google Play Store!",
+                                      "This is my first time trying out Flutter for web! Looking good so far!",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
                                           color: Colors.white,
@@ -459,23 +463,13 @@ class _PageFourState extends State<PageFour> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       children: <Widget>[
-                                        InkWell(
-                                          onTap: () async {
-                                            await launch(
-                                                "https://play.google.com/store/apps/dev?id=6109971440130385504&hl=en");
-                                          },
-                                          child: FaIcon(
-                                              FontAwesomeIcons.googlePlay,
-                                              size: Globals.dheight * 30,
-                                              color: Globals.white),
-                                        ),
                                         SizedBox(width: Globals.dheight * 25),
                                         InkWell(
                                           onTap: () async {
-                                            await launch(
-                                                "https://www.facebook.com/gdgphilippines/posts/1367551843376743");
+                                            // await launch(
+                                            //     "https://www.facebook.com/gdgphilippines/posts/1367551843376743");
                                           },
-                                          child: FaIcon(FontAwesomeIcons.link,
+                                          child: FaIcon(FontAwesomeIcons.heart,
                                               size: Globals.dheight * 30,
                                               color: Globals.white),
                                         ),
