@@ -23,37 +23,37 @@ class _PageFourState extends State<PageFour> {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SizedBox(height: Globals.dheight * 100),
+            SizedBox(height: Globals.dwidth * 100),
             Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 FaIcon(
                   FontAwesomeIcons.hammer,
-                  size: Globals.dheight * 60,
+                  size: Globals.dwidth * 60,
                   color: Globals.white,
                 ),
-                SizedBox(height: Globals.dheight * 24),
+                SizedBox(height: Globals.dwidth * 24),
                 Text(
                   "Works I've done",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontSize: Globals.dheight * 36,
+                      fontSize: Globals.dwidth * 36,
                       color: Globals.white,
                       fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: Globals.dheight * 24),
+                SizedBox(height: Globals.dwidth * 24),
                 Text(
                   "These are the most notable works I've done so far.",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontSize: Globals.dheight * 22,
+                      fontSize: Globals.dwidth * 22,
                       color: Globals.white,
                       fontWeight: FontWeight.w300),
                 ),
-                SizedBox(height: Globals.dheight * 100),
+                SizedBox(height: Globals.dwidth * 100),
               ],
             ),
-            // SizedBox(height: Globals.dheight * 20),
+            // SizedBox(height: Globals.dwidth * 20),
             Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -78,7 +78,7 @@ class _PageFourState extends State<PageFour> {
                             height: double.infinity,
                             color: Globals.darkBlue,
                             child: Padding(
-                              padding: EdgeInsets.all(Globals.dheight * 10),
+                              padding: EdgeInsets.all(Globals.dwidth * 10),
                               child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -88,19 +88,19 @@ class _PageFourState extends State<PageFour> {
                                       "Picnic Panic!",
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: Globals.dheight * 22,
+                                          fontSize: Globals.dwidth * 22,
                                           fontWeight: FontWeight.w600),
                                     ),
-                                    SizedBox(height: Globals.dheight * 10),
+                                    SizedBox(height: Globals.dwidth * 10),
                                     Text(
                                       "Picnic Panic is an award-winning casual game that won Android Masters 2018 Game Category. It took me about 3 months to build. Visit it on the Google Play Store!",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: Globals.dheight * 16,
+                                          fontSize: Globals.dwidth * 16,
                                           fontWeight: FontWeight.w300),
                                     ),
-                                    SizedBox(height: Globals.dheight * 15),
+                                    SizedBox(height: Globals.dwidth * 15),
                                     Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
@@ -112,17 +112,17 @@ class _PageFourState extends State<PageFour> {
                                           },
                                           child: FaIcon(
                                               FontAwesomeIcons.googlePlay,
-                                              size: Globals.dheight * 30,
+                                              size: Globals.dwidth * 30,
                                               color: Globals.white),
                                         ),
-                                        SizedBox(width: Globals.dheight * 25),
+                                        SizedBox(width: Globals.dwidth * 25),
                                         InkWell(
                                           onTap: () async {
                                             await launch(
                                                 "https://www.facebook.com/gdgphilippines/posts/1380215135443747");
                                           },
                                           child: FaIcon(FontAwesomeIcons.link,
-                                              size: Globals.dheight * 30,
+                                              size: Globals.dwidth * 30,
                                               color: Globals.white),
                                         ),
                                       ],
@@ -147,7 +147,7 @@ class _PageFourState extends State<PageFour> {
                             height: double.infinity,
                             color: Globals.darkBlue,
                             child: Padding(
-                              padding: EdgeInsets.all(Globals.dheight * 10),
+                              padding: EdgeInsets.all(Globals.dwidth * 10),
                               child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -157,19 +157,19 @@ class _PageFourState extends State<PageFour> {
                                       "Papyrus-Digital Receipts",
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: Globals.dheight * 22,
+                                          fontSize: Globals.dwidth * 22,
                                           fontWeight: FontWeight.w600),
                                     ),
-                                    SizedBox(height: Globals.dheight * 10),
+                                    SizedBox(height: Globals.dwidth * 10),
                                     Text(
                                       "Papyrus is a digital receipts and expense tracking app. This was our entry in Accenture's Program The Future 2019. Visit it on the Google Play Store!",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: Globals.dheight * 16,
+                                          fontSize: Globals.dwidth * 16,
                                           fontWeight: FontWeight.w300),
                                     ),
-                                    SizedBox(height: Globals.dheight * 15),
+                                    SizedBox(height: Globals.dwidth * 15),
                                     Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
@@ -181,17 +181,17 @@ class _PageFourState extends State<PageFour> {
                                           },
                                           child: FaIcon(
                                               FontAwesomeIcons.googlePlay,
-                                              size: Globals.dheight * 30,
+                                              size: Globals.dwidth * 30,
                                               color: Globals.white),
                                         ),
-                                        SizedBox(width: Globals.dheight * 25),
+                                        SizedBox(width: Globals.dwidth * 25),
                                         InkWell(
                                           onTap: () async {
                                             await launch(
                                                 "https://www.facebook.com/gdgphilippines/posts/1380215135443747");
                                           },
                                           child: FaIcon(FontAwesomeIcons.link,
-                                              size: Globals.dheight * 30,
+                                              size: Globals.dwidth * 30,
                                               color: Globals.white),
                                         ),
                                       ],
@@ -201,7 +201,7 @@ class _PageFourState extends State<PageFour> {
                           )),
                     ],
                   ),
-                  // SizedBox(height: Globals.dheight * 30),
+                  // SizedBox(height: Globals.dwidth * 30),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
@@ -221,7 +221,7 @@ class _PageFourState extends State<PageFour> {
                             height: double.infinity,
                             color: Globals.darkBlue,
                             child: Padding(
-                              padding: EdgeInsets.all(Globals.dheight * 10),
+                              padding: EdgeInsets.all(Globals.dwidth * 10),
                               child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -231,19 +231,19 @@ class _PageFourState extends State<PageFour> {
                                       "MentAllerts",
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: Globals.dheight * 22,
+                                          fontSize: Globals.dwidth * 22,
                                           fontWeight: FontWeight.w600),
                                     ),
-                                    SizedBox(height: Globals.dheight * 10),
+                                    SizedBox(height: Globals.dwidth * 10),
                                     Text(
                                       "MentAllerts is an award-winning app that utilizes Artificial Intelligence to predict the mental state of an individual based on tweets. This won 2nd place in the Alliance HackIT Challenge 2019.",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: Globals.dheight * 16,
+                                          fontSize: Globals.dwidth * 16,
                                           fontWeight: FontWeight.w300),
                                     ),
-                                    SizedBox(height: Globals.dheight * 15),
+                                    SizedBox(height: Globals.dwidth * 15),
                                     Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
@@ -255,17 +255,17 @@ class _PageFourState extends State<PageFour> {
                                           },
                                           child: FaIcon(
                                               FontAwesomeIcons.googlePlay,
-                                              size: Globals.dheight * 30,
+                                              size: Globals.dwidth * 30,
                                               color: Globals.white),
                                         ),
-                                        SizedBox(width: Globals.dheight * 25),
+                                        SizedBox(width: Globals.dwidth * 25),
                                         InkWell(
                                           onTap: () async {
                                             await launch(
                                                 "https://www.facebook.com/AllianceSoftwareInc/posts/2574799315966572");
                                           },
                                           child: FaIcon(FontAwesomeIcons.link,
-                                              size: Globals.dheight * 30,
+                                              size: Globals.dwidth * 30,
                                               color: Globals.white),
                                         ),
                                       ],
@@ -290,7 +290,7 @@ class _PageFourState extends State<PageFour> {
                             height: double.infinity,
                             color: Globals.darkBlue,
                             child: Padding(
-                              padding: EdgeInsets.all(Globals.dheight * 10),
+                              padding: EdgeInsets.all(Globals.dwidth * 10),
                               child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -300,19 +300,19 @@ class _PageFourState extends State<PageFour> {
                                       "Color Flex!",
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: Globals.dheight * 22,
+                                          fontSize: Globals.dwidth * 22,
                                           fontWeight: FontWeight.w600),
                                     ),
-                                    SizedBox(height: Globals.dheight * 10),
+                                    SizedBox(height: Globals.dwidth * 10),
                                     Text(
                                       "Color Flex! is an award-winning casual game that qualified for Android Masters 2018. Visit it on the Google Play Store!",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: Globals.dheight * 16,
+                                          fontSize: Globals.dwidth * 16,
                                           fontWeight: FontWeight.w300),
                                     ),
-                                    SizedBox(height: Globals.dheight * 15),
+                                    SizedBox(height: Globals.dwidth * 15),
                                     Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
@@ -324,17 +324,17 @@ class _PageFourState extends State<PageFour> {
                                           },
                                           child: FaIcon(
                                               FontAwesomeIcons.googlePlay,
-                                              size: Globals.dheight * 30,
+                                              size: Globals.dwidth * 30,
                                               color: Globals.white),
                                         ),
-                                        SizedBox(width: Globals.dheight * 25),
+                                        SizedBox(width: Globals.dwidth * 25),
                                         InkWell(
                                           onTap: () async {
                                             await launch(
                                                 "https://www.facebook.com/gdgphilippines/posts/1367551843376743");
                                           },
                                           child: FaIcon(FontAwesomeIcons.link,
-                                              size: Globals.dheight * 30,
+                                              size: Globals.dwidth * 30,
                                               color: Globals.white),
                                         ),
                                       ],
@@ -363,7 +363,7 @@ class _PageFourState extends State<PageFour> {
                             height: double.infinity,
                             color: Globals.darkBlue,
                             child: Padding(
-                              padding: EdgeInsets.all(Globals.dheight * 10),
+                              padding: EdgeInsets.all(Globals.dwidth * 10),
                               child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -373,19 +373,19 @@ class _PageFourState extends State<PageFour> {
                                       "Escape Velocity",
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: Globals.dheight * 22,
+                                          fontSize: Globals.dwidth * 22,
                                           fontWeight: FontWeight.w600),
                                     ),
-                                    SizedBox(height: Globals.dheight * 10),
+                                    SizedBox(height: Globals.dwidth * 10),
                                     Text(
                                       "Escape Velocity is a hyper-casual app with beautiful graphics and addictive gameplay. Visit on the Play Store!",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: Globals.dheight * 16,
+                                          fontSize: Globals.dwidth * 16,
                                           fontWeight: FontWeight.w300),
                                     ),
-                                    SizedBox(height: Globals.dheight * 15),
+                                    SizedBox(height: Globals.dwidth * 15),
                                     Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
@@ -397,17 +397,17 @@ class _PageFourState extends State<PageFour> {
                                           },
                                           child: FaIcon(
                                               FontAwesomeIcons.googlePlay,
-                                              size: Globals.dheight * 30,
+                                              size: Globals.dwidth * 30,
                                               color: Globals.white),
                                         ),
-                                        SizedBox(width: Globals.dheight * 25),
+                                        SizedBox(width: Globals.dwidth * 25),
                                         InkWell(
                                           onTap: () async {
                                             await launch(
                                                 "https://www.facebook.com/AllianceSoftwareInc/posts/2574799315966572");
                                           },
                                           child: FaIcon(FontAwesomeIcons.link,
-                                              size: Globals.dheight * 30,
+                                              size: Globals.dwidth * 30,
                                               color: Globals.white),
                                         ),
                                       ],
@@ -426,7 +426,7 @@ class _PageFourState extends State<PageFour> {
                                 "This\nPortfolio.",
                                 style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: Globals.dheight * 60,
+                                    fontSize: Globals.dwidth * 60,
                                     fontWeight: FontWeight.w600),
                               ),
                             ),
@@ -436,7 +436,7 @@ class _PageFourState extends State<PageFour> {
                             height: double.infinity,
                             color: Globals.darkBlue,
                             child: Padding(
-                              padding: EdgeInsets.all(Globals.dheight * 10),
+                              padding: EdgeInsets.all(Globals.dwidth * 10),
                               child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -446,31 +446,31 @@ class _PageFourState extends State<PageFour> {
                                       "This Portfolio.",
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: Globals.dheight * 22,
+                                          fontSize: Globals.dwidth * 22,
                                           fontWeight: FontWeight.w600),
                                     ),
-                                    SizedBox(height: Globals.dheight * 10),
+                                    SizedBox(height: Globals.dwidth * 10),
                                     Text(
                                       "This is my first time trying out Flutter for web! Looking good so far!",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: Globals.dheight * 16,
+                                          fontSize: Globals.dwidth * 16,
                                           fontWeight: FontWeight.w300),
                                     ),
-                                    SizedBox(height: Globals.dheight * 15),
+                                    SizedBox(height: Globals.dwidth * 15),
                                     Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       children: <Widget>[
-                                        SizedBox(width: Globals.dheight * 25),
+                                        SizedBox(width: Globals.dwidth * 25),
                                         InkWell(
                                           onTap: () async {
                                             // await launch(
                                             //     "https://www.facebook.com/gdgphilippines/posts/1367551843376743");
                                           },
                                           child: FaIcon(FontAwesomeIcons.heart,
-                                              size: Globals.dheight * 30,
+                                              size: Globals.dwidth * 30,
                                               color: Globals.white),
                                         ),
                                       ],

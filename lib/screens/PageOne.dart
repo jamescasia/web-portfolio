@@ -33,7 +33,7 @@ class _PageOneState extends State<PageOne> {
           ]),
           Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
             // Container(
-            //   margin: EdgeInsets.only(top:Globals.dheight*20),
+            //   margin: EdgeInsets.only(top:Globals.dwidth*20),
             //   width:Globals.width*0.76,
             //   child: Row(
             //     mainAxisSize: MainAxisSize.max,
@@ -42,8 +42,8 @@ class _PageOneState extends State<PageOne> {
             //     children: <Widget>[
             //       Container(
             //           color: Globals.violet,
-            //           width: Globals.dheight * 60,
-            //           height: Globals.dheight * 60),
+            //           width: Globals.dwidth * 60,
+            //           height: Globals.dwidth * 60),
             //       MaterialButton(
             //         onPressed: () {},
             //         child: Text(
@@ -51,34 +51,34 @@ class _PageOneState extends State<PageOne> {
             //           style: TextStyle(
             //               color: Globals.violet,
             //               fontWeight: FontWeight.w800,
-            //               fontSize: Globals.dheight * 22),
+            //               fontSize: Globals.dwidth * 22),
             //         ),
             //         color: Globals.black,
-            //         height: Globals.dheight * 50,
+            //         height: Globals.dwidth * 50,
             //         shape: RoundedRectangleBorder(
             //             side: BorderSide(
-            //                 color: Globals.violetOutline, width: 2 * Globals.dheight),
+            //                 color: Globals.violetOutline, width: 2 * Globals.dwidth),
             //             borderRadius: BorderRadius.all(Radius.circular(1000))),
             //       )
             //     ],
             //   ),
             // ),
-            SizedBox(height: Globals.dheight * 60),
+            SizedBox(height: Globals.dwidth * 60),
             Column(
               children: <Widget>[
                 Text(
                   "James Casia",
                   style: TextStyle(
-                      fontSize: Globals.dheight * 60,
+                      fontSize: Globals.dwidth * 60,
                       color: Globals.white,
                       fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: Globals.dheight * 30),
+                SizedBox(height: Globals.dwidth * 30),
                 Text(
                   "I design, code, learn, solve problems, and explore.",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontSize: Globals.dheight * 26,
+                      fontSize: Globals.dwidth * 26,
                       color: Globals.white,
                       fontWeight: FontWeight.w300),
                 )
@@ -88,8 +88,8 @@ class _PageOneState extends State<PageOne> {
               child: Image.asset(
                 "assets/photos/profile.png",
                 fit: BoxFit.cover,
-                height: Globals.dheight * 260,
-                width: Globals.dheight * 260,
+                height: Globals.dwidth * 260,
+                width: Globals.dwidth * 260,
               ),
               borderRadius: BorderRadius.circular(1000),
             ),
