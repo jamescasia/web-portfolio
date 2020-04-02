@@ -42,6 +42,7 @@ class _HomePageState extends State<HomePage> {
             body: Container(
           width: Globals.width,
           height: Globals.height,
+          color: Globals.black,
           child: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.max,
