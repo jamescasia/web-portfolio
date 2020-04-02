@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/helpers/Globals.dart';
-import 'package:portfolio/helpers/FlippingCard.dart';
+import 'package:portfolio/helpers/HoverCard.dart';
+import 'package:portfolio/helpers/HoverCard.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -61,7 +62,7 @@ class _PageThreeState extends State<PageThree> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      FlippingCard(
+                      HoverCard(
                           Stack(
                             children: <Widget>[
                               Image.asset(
@@ -84,6 +85,7 @@ class _PageThreeState extends State<PageThree> {
                             ],
                           ),
                           Container(
+                            color: Globals.darkBlue,
                             width: double.infinity,
                             height: double.infinity,
                             child: InkWell(
@@ -125,7 +127,7 @@ class _PageThreeState extends State<PageThree> {
                             ),
                           )),
                       SizedBox(width: Globals.dwidth * 60),
-                      FlippingCard(
+                      HoverCard(
                         Stack(
                           children: <Widget>[
                             Image.asset(
@@ -150,6 +152,7 @@ class _PageThreeState extends State<PageThree> {
                         Container(
                           width: double.infinity,
                           height: double.infinity,
+                          color: Globals.darkBlue,
                           child: InkWell(
                             onTap: () async {
                               print("tapped");
@@ -194,7 +197,7 @@ class _PageThreeState extends State<PageThree> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      FlippingCard(
+                      HoverCard(
                         Stack(
                           children: <Widget>[
                             Image.asset(
@@ -219,6 +222,7 @@ class _PageThreeState extends State<PageThree> {
                         Container(
                           width: double.infinity,
                           height: double.infinity,
+                          color: Globals.darkBlue,
                           child: InkWell(
                             onTap: () async {
                               print("tapped");
@@ -258,11 +262,11 @@ class _PageThreeState extends State<PageThree> {
                         ),
                       ),
                       SizedBox(width: Globals.dwidth * 60),
-                      FlippingCard(
+                      HoverCard(
                           Stack(
                             children: <Widget>[
                               Image.asset(
-                                "assets/photos/android_masters_2.jpg",
+                                "assets/photos/android_masters.jpg",
                                 fit: BoxFit.cover,
                                 width: double.infinity,
                                 height: double.infinity,
@@ -283,6 +287,7 @@ class _PageThreeState extends State<PageThree> {
                           Container(
                             width: double.infinity,
                             height: double.infinity,
+                            color: Globals.darkBlue,
                             child: InkWell(
                               onTap: () async {
                                 print("tapped");
