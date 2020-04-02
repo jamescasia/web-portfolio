@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/helpers/Globals.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
+import 'package:cached_network_image/cached_network_image.dart';
 class PageTwo extends StatefulWidget {
   @override
   _PageTwoState createState() => _PageTwoState();

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/helpers/Globals.dart';
-
+import './ComposeMailDialog.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -167,7 +168,24 @@ class PageFive extends StatelessWidget {
                         textAlign: TextAlign.center,
                       ),
                       MaterialButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          showGeneralDialog(
+                              barrierColor: Colors.black.withOpacity(0.5),
+                              transitionBuilder: (context, a1, a2, widget) {
+                                return Transform.scale(
+                                  scale: a1.value,
+                                  child: Opacity(
+                                      opacity: a1.value,
+                                      child: ComposeMailDialog()),
+                                );
+                              },
+                              transitionDuration: Duration(milliseconds: 200),
+                              barrierDismissible: true,
+                              barrierLabel: '',
+                              context: context,
+                              pageBuilder:
+                                  (context, animation1, animation2) {});
+                        },
                         height: Globals.dheight * 60,
                         shape: RoundedRectangleBorder(
                             side: BorderSide(color: Colors.white, width: 1),
