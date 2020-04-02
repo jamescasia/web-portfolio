@@ -20,9 +20,16 @@ class PageFive extends StatelessWidget {
                 width: Globals.width,
                 height: Globals.height * 0.2),
             Container(
-              color: Globals.violet,
               width: Globals.width,
               height: Globals.height * 0.4,
+              decoration: BoxDecoration(
+
+              color: Globals.violet,
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(60),
+                      topRight: Radius.circular(60))
+              ),
+              
               child:
                   Column(mainAxisAlignment: MainAxisAlignment.end, children: [
                 Text(

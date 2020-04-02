@@ -46,48 +46,62 @@ class _HoverCardState extends State<HoverCard>
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.all(Radius.circular(20)),
-      child: MouseRegion(
-        onEnter: (e) {
+      child: GestureDetector(
+        onLongPress: () {
           setState(() {
             widget.hovering = true;
             animationController.forward();
           });
         },
-        onExit: (e) {
+        onLongPressEnd: (e) {
           setState(() {
             widget.hovering = false;
             animationController.animateBack(1);
           });
         },
-        child: Container(
-          color: Globals.black,
-          width: (Globals.width * 0.44 / Globals.height * 0.26 > (16 / 9))
-              ? Globals.width * 0.44
-              : Globals.height * 0.26 * (16 / 9),
-          height: Globals.height * 0.26,
-          child: Stack(children: [
-            AnimatedContainer(
-              // scale: animation,
-              transform: (widget.hovering)
-                  ? Matrix4.translationValues(0, Globals.height * 0.26, 0)
-                  : Matrix4.translationValues(0, 0, 0),
-              duration: Duration(milliseconds: 300),
-              curve: Curves.ease,
-              child: ClipRRect(
-                  borderRadius: BorderRadius.all(Radius.circular(20)),
-                  child: widget.normal),
-            ),
-            AnimatedContainer(
-              curve: Curves.ease,
-              child: ClipRRect(
-                  borderRadius: BorderRadius.all(Radius.circular(20)),
-                  child: widget.hover),
-              duration: Duration(milliseconds: 300),
-              transform: (widget.hovering)
-                  ? Matrix4.translationValues(0, 0, 0)
-                  : Matrix4.translationValues(0, -Globals.height * 0.26, 0),
-            ),
-          ]),
+        child: MouseRegion(
+          onEnter: (e) {
+            setState(() {
+              widget.hovering = true;
+              animationController.forward();
+            });
+          },
+          onExit: (e) {
+            setState(() {
+              widget.hovering = false;
+              animationController.animateBack(1);
+            });
+          },
+          child: Container(
+            color: Globals.black,
+            width: (Globals.width * 0.44 / Globals.height * 0.26 > (16 / 9))
+                ? Globals.width * 0.44
+                : Globals.height * 0.26 * (16 / 9),
+            height: Globals.height * 0.26,
+            child: Stack(children: [
+              AnimatedContainer(
+                // scale: animation,
+                transform: (widget.hovering)
+                    ? Matrix4.translationValues(0, Globals.height * 0.26, 0)
+                    : Matrix4.translationValues(0, 0, 0),
+                duration: Duration(milliseconds: 300),
+                curve: Curves.ease,
+                child: ClipRRect(
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                    child: widget.normal),
+              ),
+              AnimatedContainer(
+                curve: Curves.ease,
+                child: ClipRRect(
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                    child: widget.hover),
+                duration: Duration(milliseconds: 300),
+                transform: (widget.hovering)
+                    ? Matrix4.translationValues(0, 0, 0)
+                    : Matrix4.translationValues(0, -Globals.height * 0.26, 0),
+              ),
+            ]),
+          ),
         ),
       ),
     );

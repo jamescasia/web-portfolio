@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/helpers/Globals.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+
 class PageTwo extends StatefulWidget {
   @override
   _PageTwoState createState() => _PageTwoState();
@@ -19,7 +20,11 @@ class _PageTwoState extends State<PageTwo> {
             Container(
               width: Globals.width,
               height: Globals.height * 0.6,
-              color: Globals.violet,
+              decoration: BoxDecoration(
+                  color: Globals.violet,
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(60),
+                      bottomRight: Radius.circular(60))),
               child: Center(
                 child: Container(
                   width: Globals.width * 0.5,
