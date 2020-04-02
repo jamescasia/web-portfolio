@@ -24,7 +24,7 @@ class _ComposeMailDialogState extends State<ComposeMailDialog> {
         color: Globals.black,
         width: Globals.width * 0.5,
         height: Globals.height * 0.6,
-        padding: EdgeInsets.all(Globals.dwidth * 30),
+        padding: EdgeInsets.all(((Globals.width>Globals.height) ? Globals.dwidth: Globals.dheight) * 30),
         child: Stack(
           children: <Widget>[
             Column(
@@ -32,7 +32,7 @@ class _ComposeMailDialogState extends State<ComposeMailDialog> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: Globals.dwidth * 20,
+                    height: ((Globals.width>Globals.height) ? Globals.dwidth: Globals.dheight) * 20,
                   ),
                   Flex(
                     direction: Axis.horizontal,
@@ -46,13 +46,13 @@ class _ComposeMailDialogState extends State<ComposeMailDialog> {
                             Text(
                               "Name",
                               style: TextStyle(
-                                  fontSize: Globals.dwidth * 22,
+                                  fontSize: ((Globals.width>Globals.height) ? Globals.dwidth: Globals.dheight) * 22,
                                   color: Globals.white,
                                   fontWeight: FontWeight.w300),
                             ),
                             TextField(
                               style: TextStyle(
-                                  fontSize: Globals.dwidth * 18,
+                                  fontSize: ((Globals.width>Globals.height) ? Globals.dwidth: Globals.dheight) * 18,
                                   color: Colors.white),
                               controller: nameController,
                               decoration: new InputDecoration.collapsed(
@@ -75,13 +75,13 @@ class _ComposeMailDialogState extends State<ComposeMailDialog> {
                             Text(
                               "Email",
                               style: TextStyle(
-                                  fontSize: Globals.dwidth * 22,
+                                  fontSize: ((Globals.width>Globals.height) ? Globals.dwidth: Globals.dheight) * 22,
                                   color: Globals.white,
                                   fontWeight: FontWeight.w300),
                             ),
                             TextField(
                               style: TextStyle(
-                                  fontSize: Globals.dwidth * 18,
+                                  fontSize: ((Globals.width>Globals.height) ? Globals.dwidth: Globals.dheight) * 18,
                                   color: Colors.white),
                               controller: emailController,
                               decoration: new InputDecoration.collapsed(
@@ -104,13 +104,13 @@ class _ComposeMailDialogState extends State<ComposeMailDialog> {
                       Text(
                         "Project Title",
                         style: TextStyle(
-                            fontSize: Globals.dwidth * 22,
+                            fontSize: ((Globals.width>Globals.height) ? Globals.dwidth: Globals.dheight) * 22,
                             color: Globals.white,
                             fontWeight: FontWeight.w300),
                       ),
                       TextField(
                         style: TextStyle(
-                            fontSize: Globals.dwidth * 18,
+                            fontSize: ((Globals.width>Globals.height) ? Globals.dwidth: Globals.dheight) * 18,
                             color: Colors.white),
                         controller: titleController,
                         decoration: new InputDecoration.collapsed(
@@ -130,14 +130,14 @@ class _ComposeMailDialogState extends State<ComposeMailDialog> {
                       Text(
                         "Additional Details",
                         style: TextStyle(
-                            fontSize: Globals.dwidth * 22,
+                            fontSize: ((Globals.width>Globals.height) ? Globals.dwidth: Globals.dheight) * 22,
                             color: Globals.white,
                             fontWeight: FontWeight.w300),
                       ),
                       TextField(
                         
                         style: TextStyle(
-                            fontSize: Globals.dwidth * 18,
+                            fontSize: ((Globals.width>Globals.height) ? Globals.dwidth: Globals.dheight) * 18,
                             color: Colors.white),
                         controller: detailsController,
                         maxLines: 5,
@@ -161,7 +161,7 @@ class _ComposeMailDialogState extends State<ComposeMailDialog> {
                     Navigator.pop(context);
                   },
                   child: FaIcon(FontAwesomeIcons.times,
-                      color: Colors.white, size: Globals.dwidth * 40),
+                      color: Colors.white, size: ((Globals.width>Globals.height) ? Globals.dwidth: Globals.dheight) * 40),
                 ))
           ],
         ),
