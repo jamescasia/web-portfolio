@@ -14,6 +14,7 @@ class PortfolioApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
+      title: "James Casia",
     );
   }
 }
@@ -26,15 +27,15 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   double safePadding = 0;
   @override
-  Widget build(BuildContext context) {
-    Globals.dheight = MediaQuery.of(context).size.height / 981;
-    Globals.dwidth = MediaQuery.of(context).size.width / 1873;
-    Globals.height = MediaQuery.of(context).size.height;
-    Globals.width = MediaQuery.of(context).size.width;
+  Widget build(BuildContext context) { 
     return SafeArea(child: LayoutBuilder(builder: (context, constraints) {
+      Globals.height = MediaQuery.of(context).size.height;
       safePadding = Globals.height - constraints.maxHeight;
-      Globals.height = constraints.maxHeight;
-      Globals.width = constraints.maxWidth;
+       Globals.width = constraints.maxWidth;
+        Globals.height = constraints.maxHeight;
+
+        Globals.dheight = Globals.height / 981;
+        Globals.dwidth = Globals.width / 1873;
       print(Globals.height);
       print(Globals.width);
       return Material(
