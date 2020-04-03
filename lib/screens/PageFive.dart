@@ -39,7 +39,7 @@ class PageFive extends StatelessWidget {
                   ),
                   SizedBox(height: ((Globals.width>Globals.height) ? Globals.dwidth: Globals.dheight) * 20),
                   Container(
-                    width: Globals.width * 0.3,
+                    width:(Globals.width> Globals.height)? Globals.width * 0.3:Globals.width * 0.66 ,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[

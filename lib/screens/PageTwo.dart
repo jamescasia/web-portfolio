@@ -15,7 +15,7 @@ class _PageTwoState extends State<PageTwo> {
       children: <Widget>[
         Container(
           width: Globals.width,
-          height: Globals.height * 0.4,
+          height:(Globals.width> Globals.height)? Globals.height * 0.4:Globals.height*0.66,
           decoration: BoxDecoration(
               color: Globals.violet,
               borderRadius: BorderRadius.only(
