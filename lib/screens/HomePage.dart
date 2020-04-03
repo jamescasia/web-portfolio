@@ -41,8 +41,7 @@ class _HomePageState extends State<HomePage> {
       return Material(
         child: Scaffold(
             body: Container(
-          width: Globals.width,
-          height: Globals.height,
+          width: Globals.width, 
           color: Globals.black,
           child: SingleChildScrollView(
             child: Column(
