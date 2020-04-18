@@ -46,10 +46,33 @@ class PageFive extends StatelessWidget {
                         InkWell(
                           customBorder: CircleBorder(),
                           onTap: () async {
+                            await launch("https://mail.google.com/mail/u/0/?view=cm&fs=1&to=wayperwayp@gmail.com&su=SUBJECT&body=BODY&tf=1");
+                          },
+                          child: FaIcon(
+                            FontAwesomeIcons.envelope,
+                            color: Colors.white,
+                            size: ((Globals.width>Globals.height) ? Globals.dwidth: Globals.dheight) * 40,
+                          ),
+                        ),
+                        InkWell(
+                          customBorder: CircleBorder(),
+                          onTap: () async {
                             await launch("https://github.com/jamescasia");
                           },
                           child: FaIcon(
                             FontAwesomeIcons.github,
+                            color: Colors.white,
+                            size: ((Globals.width>Globals.height) ? Globals.dwidth: Globals.dheight) * 40,
+                          ),
+                        ),
+                        InkWell(
+                          customBorder: CircleBorder(),
+                          onTap: () async {
+                            await launch(
+                                "https://www.hackerrank.com/liquidN1tr0");
+                          },
+                          child: FaIcon(
+                            FontAwesomeIcons.hackerrank,
                             color: Colors.white,
                             size: ((Globals.width>Globals.height) ? Globals.dwidth: Globals.dheight) * 40,
                           ),
@@ -116,7 +139,7 @@ class PageFive extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: ((Globals.width>Globals.height) ? Globals.dwidth: Globals.dheight) * 16,
-                          fontWeight: FontWeight.w600),
+                          fontWeight: FontWeight.w400),
                     ),
                   ),
                   InkWell(
@@ -128,7 +151,7 @@ class PageFive extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: ((Globals.width>Globals.height) ? Globals.dwidth: Globals.dheight) * 16,
-                          fontWeight: FontWeight.w600),
+                          fontWeight: FontWeight.w400),
                     ),
                   ),
                   Text(
@@ -136,7 +159,7 @@ class PageFive extends StatelessWidget {
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: ((Globals.width>Globals.height) ? Globals.dwidth: Globals.dheight) * 16,
-                        fontWeight: FontWeight.w600),
+                        fontWeight: FontWeight.w400),
                   ),
                   SizedBox(height: ((Globals.width>Globals.height) ? Globals.dwidth: Globals.dheight) * 20),
                 ]),
