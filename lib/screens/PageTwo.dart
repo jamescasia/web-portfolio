@@ -15,7 +15,9 @@ class _PageTwoState extends State<PageTwo> {
       children: <Widget>[
         Container(
           width: Globals.width,
-          height:(Globals.width> Globals.height)? Globals.height * 0.4:Globals.height*0.66,
+          height: (Globals.width > Globals.height)
+              ? Globals.height * 0.4
+              : Globals.height * 0.66,
           decoration: BoxDecoration(
               color: Globals.violet,
               borderRadius: BorderRadius.only(
@@ -276,7 +278,7 @@ class _PageTwoState extends State<PageTwo> {
                                           : Globals.dheight) *
                                       10),
                               Text(
-                                "Flutter,Dart\nAndroid Studio, Java",
+                                "Flutter\nAndroid Studio\nC++,C,Python,Java,Javascript,Kotlin,SQL\nFirebase, SQL, MongoDB, Express, Docker",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     fontSize: ((Globals.width > Globals.height)
