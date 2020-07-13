@@ -242,7 +242,7 @@ class _PageTwoState extends State<PageTwo> {
                                           : Globals.dheight) *
                                       10),
                               Text(
-                                "I breathe to life  even the most ambitious\ndesigns",
+                                "I breathe to life  even the \nmost ambitious designs",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     fontSize: ((Globals.width > Globals.height)
@@ -272,13 +272,13 @@ class _PageTwoState extends State<PageTwo> {
                                     color: Globals.lightVioletOutline,
                                     fontWeight: FontWeight.w700),
                               ),
-                              SizedBox(
-                                  height: ((Globals.width > Globals.height)
-                                          ? Globals.dwidth
-                                          : Globals.dheight) *
-                                      10),
+                              // SizedBox(
+                              //     height: ((Globals.width > Globals.height)
+                              //             ? Globals.dwidth
+                              //             : Globals.dheight) *
+                              //         10),
                               Text(
-                                "Flutter\nAndroid Studio\nC++,C,Python,Java,Javascript,Kotlin,SQL\nFirebase, SQL, MongoDB, Express, Docker",
+                                "Flutter, Android Studio\nC++,C,Python,Java,Javascript\nFirebase, SQL, MongoDB, Express, Docker",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     fontSize: ((Globals.width > Globals.height)

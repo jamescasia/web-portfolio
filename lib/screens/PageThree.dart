@@ -306,7 +306,7 @@ class _PageThreeState extends State<PageThree> {
                               Stack(
                                 children: <Widget>[
                                   Image.asset(
-                                    "assets/photos/android_masters.jpg",
+                                    "assets/photos/azure_hack.png",
                                     fit: BoxFit.cover,
                                     width: double.infinity,
                                     height: double.infinity,
@@ -315,7 +315,7 @@ class _PageThreeState extends State<PageThree> {
                                     right: 20,
                                     bottom: 20,
                                     child: Text(
-                                      "Android Masters 2018\nGrand Finalist",
+                                      "Microsoft Azure Hack\nAPAC Region 2020\nGrand Champion",
                                       style: TextStyle(
                                           color: Colors.white,
                                           fontSize: ((Globals.width>Globals.height) ? Globals.dwidth: Globals.dheight) * 22,
@@ -332,7 +332,7 @@ class _PageThreeState extends State<PageThree> {
                                   onTap: () async {
                                     print("tapped");
                                     await launch(
-                                        "https://androidmasters.eclaro.gdgph.org/");
+                                        "https://www.msazurevirtualhack.com/");
                                   },
                                   child: Padding(
                                     padding:
@@ -345,7 +345,7 @@ class _PageThreeState extends State<PageThree> {
                                             CrossAxisAlignment.center,
                                         children: [
                                           Text(
-                                            "Android masters Finals",
+                                            "Microsoft Azure Virtual Hack 2020",
                                             style: TextStyle(
                                                 color: Colors.white,
                                                 fontSize:
@@ -355,8 +355,7 @@ class _PageThreeState extends State<PageThree> {
                                           SizedBox(
                                               height: ((Globals.width>Globals.height) ? Globals.dwidth: Globals.dheight) * 10),
                                           Text(
-                                            "This seems to be a mistake. Why is there a repeat? Well, because I along with my team submitted two entries, and out of hundreds of submissions, two of ours got in top 5.",
-                                            textAlign: TextAlign.center,
+                                            "Microsoft Azure Virtual Hack was a virtual Data Science hackathon in the Asia Pacific Region. Teamed up with people all over SEA and we managed to be the winners!", textAlign: TextAlign.center,
                                             style: TextStyle(
                                                 color: Colors.white,
                                                 fontSize:

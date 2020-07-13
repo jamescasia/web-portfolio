@@ -4,6 +4,7 @@ import 'package:portfolio/models/Project.dart';
 
 class ProjectPopup extends StatefulWidget {
   Project project;
+  ProjectPopup(this.project);
   @override
   _ProjectPopupState createState() => _ProjectPopupState(this.project);
 }
@@ -13,7 +14,7 @@ class _ProjectPopupState extends State<ProjectPopup> {
   _ProjectPopupState(this.project);
   @override
   Widget build(BuildContext context) {
-    Dialog(
+    return Dialog(
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(30))),
       child: Container(
@@ -25,174 +26,7 @@ class _ProjectPopupState extends State<ProjectPopup> {
                 : Globals.dheight) *
             30),
         child: Stack(
-          children: <Widget>[
-            Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    height: ((Globals.width > Globals.height)
-                            ? Globals.dwidth
-                            : Globals.dheight) *
-                        20,
-                  ),
-                  Flex(
-                    direction: Axis.horizontal,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: <Widget>[
-                      Expanded(
-                        flex: 1,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              "Name",
-                              style: TextStyle(
-                                  fontSize: ((Globals.width > Globals.height)
-                                          ? Globals.dwidth
-                                          : Globals.dheight) *
-                                      22,
-                                  color: Globals.white,
-                                  fontWeight: FontWeight.w300),
-                            ),
-                            TextField(
-                              style: TextStyle(
-                                  fontSize: ((Globals.width > Globals.height)
-                                          ? Globals.dwidth
-                                          : Globals.dheight) *
-                                      18,
-                                  color: Colors.white),
-                              controller: nameController,
-                              decoration: new InputDecoration.collapsed(
-                                  border: new OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                        width: 2, color: Colors.white),
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(20)),
-                                  ),
-                                  hintText: 'Name'),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              "Email",
-                              style: TextStyle(
-                                  fontSize: ((Globals.width > Globals.height)
-                                          ? Globals.dwidth
-                                          : Globals.dheight) *
-                                      22,
-                                  color: Globals.white,
-                                  fontWeight: FontWeight.w300),
-                            ),
-                            TextField(
-                              style: TextStyle(
-                                  fontSize: ((Globals.width > Globals.height)
-                                          ? Globals.dwidth
-                                          : Globals.dheight) *
-                                      18,
-                                  color: Colors.white),
-                              controller: emailController,
-                              decoration: new InputDecoration.collapsed(
-                                  border: new OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                        width: 1, color: Colors.white),
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(20)),
-                                  ),
-                                  hintText: 'Email'),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        "Project Title",
-                        style: TextStyle(
-                            fontSize: ((Globals.width > Globals.height)
-                                    ? Globals.dwidth
-                                    : Globals.dheight) *
-                                22,
-                            color: Globals.white,
-                            fontWeight: FontWeight.w300),
-                      ),
-                      TextField(
-                        style: TextStyle(
-                            fontSize: ((Globals.width > Globals.height)
-                                    ? Globals.dwidth
-                                    : Globals.dheight) *
-                                18,
-                            color: Colors.white),
-                        controller: titleController,
-                        decoration: new InputDecoration.collapsed(
-                            border: new OutlineInputBorder(
-                              borderSide:
-                                  BorderSide(width: 1, color: Colors.white),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20)),
-                            ),
-                            hintText: 'Project Title'),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        "Additional Details",
-                        style: TextStyle(
-                            fontSize: ((Globals.width > Globals.height)
-                                    ? Globals.dwidth
-                                    : Globals.dheight) *
-                                22,
-                            color: Globals.white,
-                            fontWeight: FontWeight.w300),
-                      ),
-                      TextField(
-                        style: TextStyle(
-                            fontSize: ((Globals.width > Globals.height)
-                                    ? Globals.dwidth
-                                    : Globals.dheight) *
-                                18,
-                            color: Colors.white),
-                        controller: detailsController,
-                        maxLines: 5,
-                        decoration: new InputDecoration.collapsed(
-                            border: new OutlineInputBorder(
-                              borderSide:
-                                  BorderSide(width: 1, color: Colors.white),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20)),
-                            ),
-                            hintText: 'Details'),
-                      ),
-                    ],
-                  ),
-                ]),
-            Positioned(
-                right: 0,
-                top: 0,
-                child: InkWell(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: FaIcon(FontAwesomeIcons.times,
-                      color: Colors.white,
-                      size: ((Globals.width > Globals.height)
-                              ? Globals.dwidth
-                              : Globals.dheight) *
-                          40),
-                ))
-          ],
+          children: <Widget>[],
         ),
       ),
     );
