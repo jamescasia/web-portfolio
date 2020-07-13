@@ -20,7 +20,7 @@ class AppData {
             "https://play.google.com/store/apps/details?id=org.aetherapps.escape.velocity&hl=en"),
     "papyrus": Project(
         "Papyrus",
-        "Scan your paper receipts and track and manage your expenses all in one app!",
+        "Papyrus is a digital receipts and expense tracking app. This was our entry in Accenture's Program The Future 2019. Visit it on the Google Play Store!",
         "assets/photos/papyrus.png",
         videoPath: "assets/videos/papyrus.mp4",
         playStoreLink:
@@ -31,6 +31,20 @@ class AppData {
         "assets/photos/picnic_panic.png",
         videoPath: "assets/videos/hakk-taxi.mp4",
         playStoreLink:
-            "https://play.google.com/store/apps/details?id=hakk.ai.grabApp&hl=en")
+            "https://play.google.com/store/apps/details?id=hakk.ai.grabApp&hl=en"),
+    "mentallert": Project(
+        "Mentallerts",
+        "MentAllerts is an award-winning app that utilizes Artificial Intelligence to predict the mental state of an individual based on tweets. This won 2nd place in the Alliance HackIT Challenge 2019.",
+        "assets/photos/mentalert.png",
+        videoPath: "assets/videos/mentallerts.mp4",
+        miscLink:
+            "https://www.facebook.com/AllianceSoftwareInc/posts/2574799315966572"),
+    "color-flex": Project(
+        "Color Flex",
+        "Color Flex! is an award-winning casual game that qualified for Android Masters 2018. Visit it on the Google Play Store!",
+        "assets/photos/color_flex.png",
+        videoPath: "assets/videos/color-flex.mp4",
+        miscLink:
+            "https://www.facebook.com/gdgphilippines/posts/1367551843376743")
   };
 }
