@@ -101,8 +101,14 @@ class _PageFourState extends State<PageFour> {
               //         AppData.projectList.map((p) => ProjectCard(p)).toList()),
 
               Grid(
-                horizontalSpace: 40,
-                verticalSpace: 40,
+                horizontalSpace: ((Globals.width > Globals.height)
+                        ? Globals.dwidth
+                        : Globals.dheight) *
+                    40,
+                verticalSpace: ((Globals.width > Globals.height)
+                        ? Globals.dwidth
+                        : Globals.dheight) *
+                    40,
                 width: (Globals.width > Globals.height)
                     ? Globals.width * 0.6
                     : Globals.width * 0.9,

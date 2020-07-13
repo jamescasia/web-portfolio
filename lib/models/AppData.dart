@@ -67,6 +67,11 @@ class AppData {
         "Utilize your old smartphone as a featureful CCTV Camera! Uses Artificial Intelligence to detect intruders and uses messenger chatbot for instant notification! ",
         "assets/photos/smart-ctv.png",
         githubLink: "https://github.com/jamescasia/SmartCTV"),
+    Project(
+        "DengueLytics",
+        "DengueLytics is a dengue tracking app.",
+        "assets/photos/denguelytics.png",
+        githubLink: "https://github.com/jamescasia/DengueLytics"),
   ];
 }
 

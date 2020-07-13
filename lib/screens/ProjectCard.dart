@@ -30,8 +30,14 @@ class _ProjectCardState extends State<ProjectCard> {
               height: double.infinity,
             ),
             Positioned(
-              bottom: 8,
-              right: 8,
+              bottom: ((Globals.width > Globals.height)
+                      ? Globals.dwidth
+                      : Globals.dheight) *
+                  8,
+              right: ((Globals.width > Globals.height)
+                      ? Globals.dwidth
+                      : Globals.dheight) *
+                  8,
               child: InkWell(
                 onTap: () {
                   showGeneralDialog(
@@ -54,7 +60,10 @@ class _ProjectCardState extends State<ProjectCard> {
                   child: FaIcon(
                     FontAwesomeIcons.arrowCircleUp,
                     color: Globals.darkBlue,
-                    size: 50,
+                    size: ((Globals.width > Globals.height)
+                            ? Globals.dwidth
+                            : Globals.dheight) *
+                        50,
                   ),
                 ),
               ),
@@ -147,8 +156,14 @@ class _ProjectCardState extends State<ProjectCard> {
                 ),
               ),
               Positioned(
-                bottom: 8,
-                right: 8,
+                bottom: ((Globals.width > Globals.height)
+                        ? Globals.dwidth
+                        : Globals.dheight) *
+                    8,
+                right: ((Globals.width > Globals.height)
+                        ? Globals.dwidth
+                        : Globals.dheight) *
+                    8,
                 child: InkWell(
                   onTap: () {
                     showGeneralDialog(
@@ -172,7 +187,10 @@ class _ProjectCardState extends State<ProjectCard> {
                     child: FaIcon(
                       FontAwesomeIcons.arrowCircleUp,
                       color: Colors.white,
-                      size: 50,
+                      size: ((Globals.width > Globals.height)
+                              ? Globals.dwidth
+                              : Globals.dheight) *
+                          50,
                     ),
                   ),
                 ),
