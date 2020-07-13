@@ -111,38 +111,38 @@ class _ProjectCardState extends State<ProjectCard> {
                                     ? Globals.dwidth
                                     : Globals.dheight) *
                                 15),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            InkWell(
-                              onTap: () async {
-                                await launch(project.playStoreLink);
-                              },
-                              child: FaIcon(FontAwesomeIcons.googlePlay,
-                                  size: ((Globals.width > Globals.height)
-                                          ? Globals.dwidth
-                                          : Globals.dheight) *
-                                      30,
-                                  color: Globals.white),
-                            ),
-                            SizedBox(
-                                width: ((Globals.width > Globals.height)
-                                        ? Globals.dwidth
-                                        : Globals.dheight) *
-                                    25),
-                            InkWell(
-                              onTap: () async {
-                                await launch(project.miscLink);
-                              },
-                              child: FaIcon(FontAwesomeIcons.link,
-                                  size: ((Globals.width > Globals.height)
-                                          ? Globals.dwidth
-                                          : Globals.dheight) *
-                                      30,
-                                  color: Globals.white),
-                            ),
-                          ],
-                        )
+                        // Row(
+                        //   mainAxisAlignment: MainAxisAlignment.center,
+                        //   children: <Widget>[
+                        //     InkWell(
+                        //       onTap: () async {
+                        //         await launch(project.playStoreLink);
+                        //       },
+                        //       child: FaIcon(FontAwesomeIcons.googlePlay,
+                        //           size: ((Globals.width > Globals.height)
+                        //                   ? Globals.dwidth
+                        //                   : Globals.dheight) *
+                        //               30,
+                        //           color: Globals.white),
+                        //     ),
+                        //     SizedBox(
+                        //         width: ((Globals.width > Globals.height)
+                        //                 ? Globals.dwidth
+                        //                 : Globals.dheight) *
+                        //             25),
+                        //     InkWell(
+                        //       onTap: () async {
+                        //         await launch(project.miscLink);
+                        //       },
+                        //       child: FaIcon(FontAwesomeIcons.link,
+                        //           size: ((Globals.width > Globals.height)
+                        //                   ? Globals.dwidth
+                        //                   : Globals.dheight) *
+                        //               30,
+                        //           color: Globals.white),
+                        //     ),
+                        //   ],
+                        // )
                       ]),
                 ),
               ),
