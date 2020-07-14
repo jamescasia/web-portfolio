@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/helpers/Globals.dart';
 import 'package:portfolio/models/Project.dart';
-
+import 'package:video_player/video_player.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -14,7 +14,29 @@ class ProjectPopup extends StatefulWidget {
 
 class _ProjectPopupState extends State<ProjectPopup> {
   Project project;
+  VideoPlayerController _controller;
   _ProjectPopupState(this.project);
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = VideoPlayerController.asset(project.videoPath)
+      ..initialize().then((value) {
+        setState(() {});
+
+        _controller.setLooping(true);
+
+        _controller.play();
+      });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _controller.pause();
+    _controller.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Dialog(
@@ -39,11 +61,30 @@ class _ProjectPopupState extends State<ProjectPopup> {
                   Container(
                     width: Globals.dwidth * 500,
                     // color: Colors.yellow,
-                    child: Image.asset(
-                      "assets/photos/iphone_skin.png",
-                      fit: BoxFit.cover,
-                      width: double.infinity,
-                      height: double.infinity,
+                    child: Stack(
+                      children: [
+                        _controller.value.initialized
+                            ? Center(
+                                child: ClipRRect(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(40)),
+                                    child: Transform.scale(
+                                      scale: 0.89,
+                                      child: AspectRatio(
+                                          aspectRatio: 1080 / 2000,
+                                          child: VideoPlayer(_controller)),
+                                    )),
+                              )
+                            : Container(),
+                        Center(
+                          child: Image.asset(
+                            "assets/photos/iphone_skin.png",
+                            fit: BoxFit.cover,
+                            width: double.infinity,
+                            height: double.infinity,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   Container(
@@ -137,12 +178,38 @@ class _ProjectPopupState extends State<ProjectPopup> {
                   Container(
                     height: Globals.dheight * 600,
                     // color: Colors.yellow,
-                    child: Image.asset(
-                      "assets/photos/iphone_skin.png",
-                      fit: BoxFit.fitHeight,
-                      width: double.infinity,
-                      height: double.infinity,
+                    child: Stack(
+                      children: [
+                        _controller.value.initialized
+                            ? Center(
+                                child: ClipRRect(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(40)),
+                                    child: Transform.scale(
+                                      scale: 0.89,
+                                      child: AspectRatio(
+                                          aspectRatio: 1080 / 2000,
+                                          child: VideoPlayer(_controller)),
+                                    )),
+                              )
+                            : Container(),
+                        Center(
+                          child: Image.asset(
+                            "assets/photos/iphone_skin.png",
+                            fit: BoxFit.fitHeight,
+                            width: double.infinity,
+                            height: double.infinity,
+                          ),
+                        ),
+                      ],
                     ),
+
+                    // Image.asset(
+                    //   "assets/photos/iphone_skin.png",
+                    //   fit: BoxFit.fitHeight,
+                    //   width: double.infinity,
+                    //   height: double.infinity,
+                    // ),
                   ),
                   Container(
                     // height: Globals.dheight * 200,
