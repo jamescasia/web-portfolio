@@ -6,7 +6,7 @@ class AppData {
         "Picnic Panic!",
         "Picnic Panic is an award-winning casual game that won Android Masters 2018 Game Category. It took me about 3 months to build. Visit it on the Google Play Store!",
         "assets/photos/picnic_panic.png",
-        videoPath: "https://drive.google.com/file/d/11qxTKcmCeOJ8zGb8JJ7UlLZFvk1Vvd91/view?usp=sharing",
+        videoPath: 'http://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_20mb.mp4',
         playStoreLink:
             "https://play.google.com/store/apps/details?id=org.aetherapps.picnic.panic&hl=en",
         miscLink:

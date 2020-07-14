@@ -18,6 +18,7 @@ class _ProjectPopupState extends State<ProjectPopup> {
   Project project;
   VideoPlayerController _controller;
   // VideoPlayerWeb web;
+
   _ProjectPopupState(this.project);
 
   @override
@@ -27,7 +28,7 @@ class _ProjectPopupState extends State<ProjectPopup> {
       ..initialize().then((value) {
         setState(() {});
 
-        _controller.setLooping(true);
+        // _controller.setLooping(true);
 
         _controller.play();
       });
@@ -67,16 +68,21 @@ class _ProjectPopupState extends State<ProjectPopup> {
                     child: Stack(
                       children: [
                         _controller.value.initialized
-                            ? Center(
-                                child: ClipRRect(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(40)),
-                                    child: Transform.scale(
-                                      scale: 0.89,
-                                      child: AspectRatio(
-                                          aspectRatio: 1080 / 2000,
-                                          child: VideoPlayer(_controller)),
-                                    )),
+                            ? InkWell(
+                                onTap: () {
+                                  _controller.play();
+                                },
+                                child: Center(
+                                  child: ClipRRect(
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(40)),
+                                      child: Transform.scale(
+                                        scale: 0.89,
+                                        child: AspectRatio(
+                                            aspectRatio: 1080 / 2000,
+                                            child: VideoPlayer(_controller)),
+                                      )),
+                                ),
                               )
                             : Container(),
                         Center(
@@ -184,16 +190,21 @@ class _ProjectPopupState extends State<ProjectPopup> {
                     child: Stack(
                       children: [
                         _controller.value.initialized
-                            ? Center(
-                                child: ClipRRect(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(40)),
-                                    child: Transform.scale(
-                                      scale: 0.89,
-                                      child: AspectRatio(
-                                          aspectRatio: 1080 / 2000,
-                                          child: VideoPlayer(_controller)),
-                                    )),
+                            ? InkWell(
+                                onTap: () {
+                                  _controller.play();
+                                },
+                                child: Center(
+                                  child: ClipRRect(
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(40)),
+                                      child: Transform.scale(
+                                        scale: 0.89,
+                                        child: AspectRatio(
+                                            aspectRatio: 1080 / 2000,
+                                            child: VideoPlayer(_controller)),
+                                      )),
+                                ),
                               )
                             : Container(),
                         Center(
