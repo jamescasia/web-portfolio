@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/helpers/Globals.dart';
 import 'package:portfolio/models/Project.dart';
 import 'package:video_player/video_player.dart';
+import 'dart:io';
+import 'package:video_player_web/video_player_web.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -15,12 +17,13 @@ class ProjectPopup extends StatefulWidget {
 class _ProjectPopupState extends State<ProjectPopup> {
   Project project;
   VideoPlayerController _controller;
+  // VideoPlayerWeb web;
   _ProjectPopupState(this.project);
 
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.asset(project.videoPath)
+    _controller = VideoPlayerController.network(project.videoPath)
       ..initialize().then((value) {
         setState(() {});
 
