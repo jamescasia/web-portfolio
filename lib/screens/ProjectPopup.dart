@@ -3,7 +3,6 @@ import 'package:portfolio/helpers/Globals.dart';
 import 'package:portfolio/models/Project.dart';
 import 'package:video_player/video_player.dart';
 import 'dart:io';
-import 'package:video_player_web/video_player_web.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -16,7 +15,7 @@ class ProjectPopup extends StatefulWidget {
 
 class _ProjectPopupState extends State<ProjectPopup> {
   Project project;
-  VideoPlayerController _controller;
+  // VideoPlayerController _controller;
   // VideoPlayerWeb web;
 
   _ProjectPopupState(this.project);
@@ -24,21 +23,21 @@ class _ProjectPopupState extends State<ProjectPopup> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.network(project.videoPath)
-      ..initialize().then((value) {
-        setState(() {});
+    // _controller = VideoPlayerController.network(project.videoPath)
+    //   ..initialize().then((value) {
+    //     setState(() {});
 
-        // _controller.setLooping(true);
+    //     // _controller.setLooping(true);
 
-        _controller.play();
-      });
+    //     _controller.play();
+    //   });
   }
 
   @override
   void dispose() {
     super.dispose();
-    _controller.pause();
-    _controller.dispose();
+    // _controller.pause();
+    // _controller.dispose();
   }
 
   @override
@@ -67,10 +66,10 @@ class _ProjectPopupState extends State<ProjectPopup> {
                     // color: Colors.yellow,
                     child: Stack(
                       children: [
-                        _controller.value.initialized
+                        true
                             ? InkWell(
                                 onTap: () {
-                                  _controller.play();
+                                  // _controller.play();
                                 },
                                 child: Center(
                                   child: ClipRRect(
@@ -80,7 +79,11 @@ class _ProjectPopupState extends State<ProjectPopup> {
                                         scale: 0.89,
                                         child: AspectRatio(
                                             aspectRatio: 1080 / 2000,
-                                            child: VideoPlayer(_controller)),
+                                            child: Image.asset(
+                                                project.videoPath,fit: 
+                                                BoxFit.fitHeight
+                                                // width: Globals.dwidth * 500,
+                                                )),
                                       )),
                                 ),
                               )
@@ -189,11 +192,9 @@ class _ProjectPopupState extends State<ProjectPopup> {
                     // color: Colors.yellow,
                     child: Stack(
                       children: [
-                        _controller.value.initialized
+                        true
                             ? InkWell(
-                                onTap: () {
-                                  _controller.play();
-                                },
+                                onTap: () {},
                                 child: Center(
                                   child: ClipRRect(
                                       borderRadius:
@@ -202,7 +203,10 @@ class _ProjectPopupState extends State<ProjectPopup> {
                                         scale: 0.89,
                                         child: AspectRatio(
                                             aspectRatio: 1080 / 2000,
-                                            child: VideoPlayer(_controller)),
+                                            child: Image.asset(
+                                                project.videoPath,
+                                                // height: Globals.dheight * 600,
+                                                fit: BoxFit.fitHeight)),
                                       )),
                                 ),
                               )
