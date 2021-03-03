@@ -64,40 +64,55 @@ class _ProjectPopupState extends State<ProjectPopup> {
                   Container(
                     width: Globals.dwidth * 500,
                     // color: Colors.yellow,
-                    child: Stack(
-                      children: [
-                        true
-                            ? InkWell(
-                                onTap: () {
-                                  // _controller.play();
-                                },
-                                child: Center(
-                                  child: ClipRRect(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(40)),
-                                      child: Transform.scale(
-                                        scale: 0.89,
-                                        child: AspectRatio(
-                                            aspectRatio: 1080 / 2000,
-                                            child: Image.asset(
-                                                project.videoPath,fit: 
-                                                BoxFit.fitHeight
-                                                // width: Globals.dwidth * 500,
-                                                )),
-                                      )),
+                    child: project.isMobile
+                        ? Stack(
+                            children: [
+                              true
+                                  ? InkWell(
+                                      onTap: () {
+                                        // _controller.play();
+                                      },
+                                      child: Center(
+                                        child: ClipRRect(
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(40)),
+                                            child: Transform.scale(
+                                              scale: 0.89,
+                                              child: AspectRatio(
+                                                  aspectRatio: 1080 / 2000,
+                                                  child: Image.asset(
+                                                      project.videoPath,
+                                                      fit: BoxFit.fitHeight
+                                                      // width: Globals.dwidth * 500,
+                                                      )),
+                                            )),
+                                      ),
+                                    )
+                                  : Container(),
+                              Center(
+                                child: Image.asset(
+                                  "assets/photos/iphone_skin.png",
+                                  fit: BoxFit.cover,
+                                  width: double.infinity,
+                                  height: double.infinity,
                                 ),
-                              )
-                            : Container(),
-                        Center(
-                          child: Image.asset(
-                            "assets/photos/iphone_skin.png",
-                            fit: BoxFit.cover,
-                            width: double.infinity,
-                            height: double.infinity,
+                              ),
+                            ],
+                          )
+                        : Center(
+                            child: ClipRRect(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(40)),
+                                child: Transform.scale(
+                                  scale: 0.95,
+                                  child: AspectRatio(
+                                      aspectRatio: 2000 / 1080,
+                                      child: Image.asset(project.videoPath,
+                                          fit: BoxFit.fitHeight
+                                          // width: Globals.dwidth * 500,
+                                          )),
+                                )),
                           ),
-                        ),
-                      ],
-                    ),
                   ),
                   Container(
                     width: Globals.dwidth * 500,
@@ -133,50 +148,59 @@ class _ProjectPopupState extends State<ProjectPopup> {
                           ),
                           SizedBox(height: Globals.dheight * 40),
                           Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: <Widget>[
-                                InkWell(
-                                  customBorder: CircleBorder(),
-                                  onTap: () async {
-                                    await launch(project.githubLink);
-                                  },
-                                  child: FaIcon(
-                                    FontAwesomeIcons.github,
-                                    color: Colors.white,
-                                    size: ((Globals.width > Globals.height)
-                                            ? Globals.dwidth
-                                            : Globals.dheight) *
-                                        40,
-                                  ),
-                                ),
-                                InkWell(
-                                  customBorder: CircleBorder(),
-                                  onTap: () async {
-                                    await launch(project.playStoreLink);
-                                  },
-                                  child: FaIcon(
-                                    FontAwesomeIcons.googlePlay,
-                                    color: Colors.white,
-                                    size: ((Globals.width > Globals.height)
-                                            ? Globals.dwidth
-                                            : Globals.dheight) *
-                                        40,
-                                  ),
-                                ),
-                                InkWell(
-                                  customBorder: CircleBorder(),
-                                  onTap: () async {
-                                    await launch(project.miscLink);
-                                  },
-                                  child: FaIcon(
-                                    FontAwesomeIcons.link,
-                                    color: Colors.white,
-                                    size: ((Globals.width > Globals.height)
-                                            ? Globals.dwidth
-                                            : Globals.dheight) *
-                                        40,
-                                  ),
-                                ),
+                                project.githubLink != null
+                                    ? InkWell(
+                                        customBorder: CircleBorder(),
+                                        onTap: () async {
+                                          await launch(project.githubLink);
+                                        },
+                                        child: FaIcon(
+                                          FontAwesomeIcons.github,
+                                          color: Colors.white,
+                                          size:
+                                              ((Globals.width > Globals.height)
+                                                      ? Globals.dwidth
+                                                      : Globals.dheight) *
+                                                  40,
+                                        ),
+                                      )
+                                    : Container(),
+                                project.playStoreLink != null
+                                    ? InkWell(
+                                        customBorder: CircleBorder(),
+                                        onTap: () async {
+                                          await launch(project.playStoreLink);
+                                        },
+                                        child: FaIcon(
+                                          FontAwesomeIcons.googlePlay,
+                                          color: Colors.white,
+                                          size:
+                                              ((Globals.width > Globals.height)
+                                                      ? Globals.dwidth
+                                                      : Globals.dheight) *
+                                                  40,
+                                        ),
+                                      )
+                                    : Container(),
+                                project.miscLink != null
+                                    ? InkWell(
+                                        customBorder: CircleBorder(),
+                                        onTap: () async {
+                                          await launch(project.miscLink);
+                                        },
+                                        child: FaIcon(
+                                          FontAwesomeIcons.link,
+                                          color: Colors.white,
+                                          size:
+                                              ((Globals.width > Globals.height)
+                                                      ? Globals.dwidth
+                                                      : Globals.dheight) *
+                                                  40,
+                                        ),
+                                      )
+                                    : Container(),
                               ])
                         ],
                       ),
@@ -190,37 +214,52 @@ class _ProjectPopupState extends State<ProjectPopup> {
                   Container(
                     height: Globals.dheight * 600,
                     // color: Colors.yellow,
-                    child: Stack(
-                      children: [
-                        true
-                            ? InkWell(
-                                onTap: () {},
-                                child: Center(
-                                  child: ClipRRect(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(40)),
-                                      child: Transform.scale(
-                                        scale: 0.89,
-                                        child: AspectRatio(
-                                            aspectRatio: 1080 / 2000,
-                                            child: Image.asset(
-                                                project.videoPath,
-                                                // height: Globals.dheight * 600,
-                                                fit: BoxFit.fitHeight)),
-                                      )),
+                    child: project.isMobile
+                        ? Stack(
+                            children: [
+                              true
+                                  ? InkWell(
+                                      onTap: () {},
+                                      child: Center(
+                                        child: ClipRRect(
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(40)),
+                                            child: Transform.scale(
+                                              scale: 0.89,
+                                              child: AspectRatio(
+                                                  aspectRatio: 1080 / 2000,
+                                                  child: Image.asset(
+                                                      project.videoPath,
+                                                      // height: Globals.dheight * 600,
+                                                      fit: BoxFit.fitHeight)),
+                                            )),
+                                      ),
+                                    )
+                                  : Container(),
+                              Center(
+                                child: Image.asset(
+                                  "assets/photos/iphone_skin.png",
+                                  fit: BoxFit.fitHeight,
+                                  width: double.infinity,
+                                  height: double.infinity,
                                 ),
-                              )
-                            : Container(),
-                        Center(
-                          child: Image.asset(
-                            "assets/photos/iphone_skin.png",
-                            fit: BoxFit.fitHeight,
-                            width: double.infinity,
-                            height: double.infinity,
+                              ),
+                            ],
+                          )
+                        : Center(
+                            child: ClipRRect(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(40)),
+                                child: Transform.scale(
+                                  scale: 0.95,
+                                  child: AspectRatio(
+                                      aspectRatio: 2000 / 1080,
+                                      child: Image.asset(project.videoPath,
+                                          fit: BoxFit.fitHeight
+                                          // width: Globals.dwidth * 500,
+                                          )),
+                                )),
                           ),
-                        ),
-                      ],
-                    ),
 
                     // Image.asset(
                     //   "assets/photos/iphone_skin.png",
@@ -263,50 +302,59 @@ class _ProjectPopupState extends State<ProjectPopup> {
                           ),
                           SizedBox(height: Globals.dheight * 32),
                           Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: <Widget>[
-                                InkWell(
-                                  customBorder: CircleBorder(),
-                                  onTap: () async {
-                                    await launch(project.githubLink);
-                                  },
-                                  child: FaIcon(
-                                    FontAwesomeIcons.github,
-                                    color: Colors.white,
-                                    size: ((Globals.width > Globals.height)
-                                            ? Globals.dwidth
-                                            : Globals.dheight) *
-                                        32,
-                                  ),
-                                ),
-                                InkWell(
-                                  customBorder: CircleBorder(),
-                                  onTap: () async {
-                                    await launch(project.playStoreLink);
-                                  },
-                                  child: FaIcon(
-                                    FontAwesomeIcons.googlePlay,
-                                    color: Colors.white,
-                                    size: ((Globals.width > Globals.height)
-                                            ? Globals.dwidth
-                                            : Globals.dheight) *
-                                        32,
-                                  ),
-                                ),
-                                InkWell(
-                                  customBorder: CircleBorder(),
-                                  onTap: () async {
-                                    await launch(project.miscLink);
-                                  },
-                                  child: FaIcon(
-                                    FontAwesomeIcons.link,
-                                    color: Colors.white,
-                                    size: ((Globals.width > Globals.height)
-                                            ? Globals.dwidth
-                                            : Globals.dheight) *
-                                        32,
-                                  ),
-                                ),
+                                project.githubLink != null
+                                    ? InkWell(
+                                        customBorder: CircleBorder(),
+                                        onTap: () async {
+                                          await launch(project.githubLink);
+                                        },
+                                        child: FaIcon(
+                                          FontAwesomeIcons.github,
+                                          color: Colors.white,
+                                          size:
+                                              ((Globals.width > Globals.height)
+                                                      ? Globals.dwidth
+                                                      : Globals.dheight) *
+                                                  32,
+                                        ),
+                                      )
+                                    : Container(),
+                                project.playStoreLink != null
+                                    ? InkWell(
+                                        customBorder: CircleBorder(),
+                                        onTap: () async {
+                                          await launch(project.playStoreLink);
+                                        },
+                                        child: FaIcon(
+                                          FontAwesomeIcons.googlePlay,
+                                          color: Colors.white,
+                                          size:
+                                              ((Globals.width > Globals.height)
+                                                      ? Globals.dwidth
+                                                      : Globals.dheight) *
+                                                  32,
+                                        ),
+                                      )
+                                    : Container(),
+                                project.miscLink != null
+                                    ? InkWell(
+                                        customBorder: CircleBorder(),
+                                        onTap: () async {
+                                          await launch(project.miscLink);
+                                        },
+                                        child: FaIcon(
+                                          FontAwesomeIcons.link,
+                                          color: Colors.white,
+                                          size:
+                                              ((Globals.width > Globals.height)
+                                                      ? Globals.dwidth
+                                                      : Globals.dheight) *
+                                                  32,
+                                        ),
+                                      )
+                                    : Container(),
                               ])
                         ],
                       ),
