@@ -3,6 +3,14 @@ import 'package:portfolio/models/Project.dart';
 class AppData {
   static List<Project> projectList = [
     Project(
+        "Tilted Tables",
+        "Tilted Tables is a fun and cute 3d HTML5 Puzzle game. It implements Web Monetization through Coil. This game was built in 6 days for Web Monetization hackathon.",
+        "assets/photos/tilted_tables.png",
+        videoPath: 'assets/gifs/tilted-tables.gif',
+        playStoreLink: "https://l1qu1dn1tr0.itch.io/tilted-tables",
+        miscLink: "https://l1qu1dn1tr0.itch.io/tilted-tables",
+        githubLink: "https://l1qu1dn1tr0.itch.io/tilted-tables"),
+    Project(
         "Picnic Panic!",
         "Picnic Panic is an award-winning casual game that won Android Masters 2018 Game Category. It took me about 3 months to build. Visit it on the Google Play Store!",
         "assets/photos/picnic_panic.png",

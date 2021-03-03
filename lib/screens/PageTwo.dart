@@ -55,7 +55,7 @@ class _PageTwoState extends State<PageTwo> {
                   ),
                   SizedBox(height: Globals.dheight * 24),
                   Text(
-                    "I am James Casia. I’m a hobbyist software developer who loves joining Hackathons, Software Development Competitions, and creating beautiful yet responsive software. I am currently a College sophomore.",
+                    "I am James Casia. I’m a hobbyist software developer who loves joining Hackathons,Game Jams, Software Development Competitions, and creating beautiful yet responsive software. I am currently a College junior.",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontSize: ((Globals.width > Globals.height)
@@ -278,7 +278,7 @@ class _PageTwoState extends State<PageTwo> {
                               //             : Globals.dheight) *
                               //         10),
                               Text(
-                                "Flutter, Android Studio\nC++,C,Python,Java,Javascript\nFirebase, SQL, MongoDB, Express, Docker",
+                                "Flutter, Android Studio\nGodot,Cocos Creator\nC++,C,Python,Java,Javascript\nFirebase, SQL, MongoDB, Express, Docker",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     fontSize: ((Globals.width > Globals.height)
